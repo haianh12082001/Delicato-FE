@@ -1,0 +1,11 @@
+@mixin fz-lg{
+   font-size: 36px;
+   line-height: 44px;
+}
+@mixin fz-sm{
+   font-size: 30px;
+   line-height: 36.87px;
+}
+@mixin fz-mb {
+   font-size: 14px;
+}

@@ -149,6 +149,7 @@
     }
 }
 .construction{
+    padding: 75px 0;
     &-img{
         padding-right: 52px;
         position: relative;
@@ -253,5 +254,155 @@
     .occ{
         @include fz-mb;
         color: $sub-title;
+    }
+}
+.blog{
+    padding: 30px 0;
+    background: url("../img/bg-blog.jpg") no-repeat center / cover;
+    .section-title{
+        @include fz-sm;
+    }
+    .see-more{
+        background: $blue;
+        margin-top: 25px;
+        a{
+            color: $white;
+        }
+    }
+}
+.blog-item{
+    img{
+        height: 190px;
+        width: 100%;
+    }
+    .body{
+        background: $white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        padding: 30px 25px;
+        position: relative;
+    }
+    .date{
+        position: absolute;
+        padding: 8px;
+        background: $sub-title;
+        top: 0;
+        transform: translateY(-50%);
+        color: $white;
+        font-size: 13px;
+    }
+    .name{
+        color: #373737;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 10px;
+        height: 54px;
+        @include text-truncate(2);
+    }
+    .des{
+        @include text-truncate(3);
+        font-size: 14px;
+        height: 63px;
+        margin-bottom: 10px;
+    }
+    .read{
+        color: #959595;
+        font-size: 14px;
+        a{
+            color: #959595;
+            margin-right: 8px;
+            font-style: italic;
+        }
+    }
+}
+.footer{
+    background-color: #343434;
+    font-size: 14px;
+    color: $white;
+    &-img{
+        text-align: center;
+        position: relative;
+        &::after,
+        &::before{
+            content: "";
+            position: absolute;
+            width: 43%;
+            height: 1px;
+            background: $white;
+            bottom: 10px;
+        }
+        &::before{
+            left: 0;
+        }
+        &::after{
+            right: 0;
+        }
+        img{
+            width: 62px;
+            max-height: 99px;
+        }
+    }
+    .title{
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $sub-title;
+        margin-bottom: 8px;
+    }
+    .phone,
+    .email{
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+    &-social{
+        display: inline-flex;
+        border: 1px solid $white;
+        .item{
+            height: 49px;
+            width: 49px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right:1px solid $white;
+            &:last-child{
+                border-right:1px solid transparent;
+            }
+            i{
+                font-size: 16px;
+                color: $white;
+            }
+        }
+    }
+    &-link a{ 
+        color: $white;
+        margin-bottom: 6px;
+        display: block;
+    }
+    &-form{
+        margin-top: 19px;
+        input{
+            padding:  12px;
+            height: auto;
+            background: transparent;
+            border-radius: 0;
+            flex: 1 1 auto;
+            width: 1%;
+            border: 1px solid $white;
+            border-right: transparent;
+            color: $white;
+            &::placeholder{
+                color: $white;
+                font-size: 12px;
+            }
+        }
+        button{
+            background: $sub-title;
+            border-radius: 0;
+            padding: 6px 14px;
+        }
+    }
+    .copyright{
+        margin-top: 27px;
+        border-top:1px solid $white;
+        text-align: center;
+        padding: 20px 0;
     }
 }

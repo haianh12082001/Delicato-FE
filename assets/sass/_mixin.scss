@@ -9,3 +9,11 @@
 @mixin fz-mb {
    font-size: 14px;
 }
+@mixin text-truncate($q) {
+   display:-webkit-box;
+   -webkit-line-clamp:$q;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   word-break: break-word;
+}

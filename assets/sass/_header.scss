@@ -42,6 +42,25 @@ img {
         @include fz-mb;
         font-weight: 600;
     }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: inherit;
+        left: 10%;
+        bottom: -15%;
+        // color: ;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: inherit;
+        right: -5%;
+        bottom: -30%;
+    }
 }
 .section-sub-title{
     @include fz-lg;
@@ -70,19 +89,63 @@ body {
     // color: $black-22;
     font-family: "SEGOEUI";
 }
+.icon-fixed{
+    display: inline-block;
+    height: 62px;
+    width: 62px;
+    background: $sub-title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rem;
+    border: 8px solid rgba($color: #ccc, $alpha: 1);
+    position: fixed;
+    right: 0;
+    i{
+        color: $white;
+    }
+    &.map{
+        bottom: 130px;
+    }
+    &.chat{
+        bottom: 50px;
+    }
+}
+.header.scoll-menu{
+    background: $blue;
+    .menu-children{
+        background: $blue;
+        border-left: 2px solid $sub-title;
+    }
+}
 .header{
-    background: #37476E;
+    // background: #37476E;
+    background: rgba($color: #000000, $alpha: 0.3);
     // mix-blend-mode: multiply;
     // opacity: 0.3;
+    top: 0;
     height: 62px;
     position: fixed;
     width: 100%;
     z-index: 99;
 }
+.header-mobi{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    i{
+        color: $white;
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+}
 .header-logo{
     border: 8px solid $white;
     position: absolute;
     height: 78px;
+    z-index: 99;
 }
 .menu-list{
     display: flex;
@@ -92,9 +155,45 @@ body {
     }
 }
 .menu-item{
+    position: relative;
     padding: 20px 0;
+    font-weight: 700;
     i{
         color: $white;
+    }
+}
+.menu-item:hover .menu-children{
+    opacity: 1;
+    visibility: visible;
+}
+.menu-item a:hover
+{
+    color: $sub-title;
+}
+.menu-children{
+    min-width: 200px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 62px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    i{
+        padding: 0 5px;
+        transition: all 0.3s;
+    }
+    a{
+        display: block;
+        padding: 0.5rem;
+        border-bottom: 1px #666 solid;
+        &:hover {
+            color: $sub-title;
+            i{
+                transform: rotate(360deg);
+                color: $sub-title;
+            }
+        }
     }
 }
 .banner{
@@ -143,5 +242,115 @@ body {
         height: 12px;
         border-radius: 50rem;
         border: 1px solid $white;
+    }
+}
+.bg-breadcrumb{
+    background: #e5e5e5;
+    margin-top: 62px;
+    .breadcrumb{
+        background: none;
+    }
+}
+.footer{
+    background-color: #343434;
+    font-size: 14px;
+    color: $white;
+    position: relative;
+    &-img{
+        text-align: center;
+        position: relative;
+        &::after,
+        &::before{
+            content: "";
+            position: absolute;
+            width: 43%;
+            height: 1px;
+            background: $white;
+            bottom: 10px;
+        }
+        &::before{
+            left: 0;
+        }
+        &::after{
+            right: 0;
+        }
+        img{
+            width: 62px;
+            max-height: 99px;
+        }
+    }
+    .title{
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $sub-title;
+        margin-bottom: 8px;
+    }
+    .phone,
+    .email{
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+    &-social{
+        display: inline-flex;
+        border: 1px solid $white;
+        .item{
+            height: 49px;
+            width: 49px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right:1px solid $white;
+            &:last-child{
+                border-right:1px solid transparent;
+            }
+            i{
+                font-size: 16px;
+                color: $white;
+            }
+        }
+    }
+    &-link a{ 
+        color: $white;
+        margin-bottom: 6px;
+        display: block;
+    }
+    &-form{
+        margin-top: 19px;
+        input{
+            padding:  12px;
+            height: auto;
+            background: transparent;
+            border-radius: 0;
+            flex: 1 1 auto;
+            width: 1%;
+            border: 1px solid $white;
+            border-right: transparent;
+            color: $white;
+            &::placeholder{
+                color: $white;
+                font-size: 12px;
+            }
+        }
+        button{
+            background: $sub-title;
+            border-radius: 0;
+            padding: 6px 14px;
+        }
+    }
+    .copyright{
+        margin-top: 27px;
+        border-top:1px solid $white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    &-container{
+        position: relative;
+    }
+    &-bg{
+        position: absolute;
+        bottom: 0;
+        right: 2%;
+        height: 70%;
+        width: 149px;
     }
 }

@@ -12,15 +12,14 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/app.css" />
 </head>
-
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-12">
                     <img src="./assets/img/Logo.png" alt="" class="header-logo" />
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-12">
                     <ul class="menu-list">
                         <li class="menu-item">
                             <a href="">Trang chủ</a>
@@ -30,6 +29,27 @@
                         </li>
                         <li class="menu-item">
                             <a href="">Dự án</a>
+                            <i class="fas fa-caret-down"></i>
+                            <ul class="menu-children">
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-angle-right"></i>
+                                        Dự án 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-angle-right"></i>
+                                        Dự án 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-angle-right"></i>
+                                        Dự án 1
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu-item">
                             <a href="">Video</a>
@@ -44,6 +64,14 @@
                             <i class="fas fa-search"></i>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div class="header-mobi">
+                <div class="search-mobi">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="bars-mobi">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
@@ -72,7 +100,7 @@
         <img src="./assets/img/icon-tree.png" alt="" class="img-tree" />
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="section-sub-title">Giới thiệu</div>
                     <div class="section-title text-uppercase">về DELICATO</div>
                     <div class="content">
@@ -81,14 +109,14 @@
                         nisi at porta convallis. In posuere interdum erat, et bibendum
                         arcu. Etiam quis viverra diam.
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
+                    <div class="row gutters-5">
+                        <div class="col-lg-4 col-md-4 col-4">
                             <img src="./assets/img/intro/1.png" alt="" class="intro-img--left" />
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-4">
                             <img src="./assets/img/intro/1.png" alt="" class="intro-img--left" />
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-4">
                             <img src="./assets/img/intro/1.png" alt="" class="intro-img--left" />
                         </div>
                     </div>
@@ -97,7 +125,7 @@
                         <a href="">XEM THÊM</a>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="intro-img--right">
                         <img src="./assets/img/intro/2.png" alt="" />
                     </div>
@@ -133,7 +161,10 @@
                     chúng tôi triển khai từ kiến trúc ngoại thất cho tới hoàn thiện nội
                     thất sử dụng toàn bộ gỗ Óc Chó tự nhiên.
                 </div>
-                <a href="" class="see-detail">Xem chi tiết</a>
+                <div class="see-detail">
+                    <a href="">Xem chi tiết</a>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
             </div>
             <div class="project-item">
                 <div class="title text-uppercase">
@@ -145,7 +176,10 @@
                     chúng tôi triển khai từ kiến trúc ngoại thất cho tới hoàn thiện nội
                     thất sử dụng toàn bộ gỗ Óc Chó tự nhiên.
                 </div>
-                <a href="" class="see-detail">Xem chi tiết</a>
+                <div class="see-detail">
+                    <a href="">Xem chi tiết</a>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
             </div>
             <div class="project-item">
                 <div class="title text-uppercase">
@@ -157,7 +191,10 @@
                     chúng tôi triển khai từ kiến trúc ngoại thất cho tới hoàn thiện nội
                     thất sử dụng toàn bộ gỗ Óc Chó tự nhiên.
                 </div>
-                <a href="" class="see-detail">Xem chi tiết</a>
+                <div class="see-detail">
+                    <a href="">Xem chi tiết</a>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
             </div>
         </div>
         <div class="nav-project">
@@ -174,7 +211,7 @@
                 <img src="./assets/img/project/1.jpg" alt="" />
             </div>
         </div>
-        <div class="text-center mt-5">
+        <div class="text-center mt-lg-5 mt-3">
             <div class="see-more">
                 <img src="./assets/img/icon-tree-sm.png" alt="">
                 <a href="">XEM TẤT CẢ</a>
@@ -184,13 +221,13 @@
     <section class="construction">
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <div class="construction-img">
                         <img src="./assets/img/construction.jpg" alt="">
                     </div>
 
                 </div>
-                <div class="col-lg-6 d-flex align-items-center">
+                <div class="col-lg-6 col-md-6 d-flex align-items-center">
                     <div class="content">
                         <div class="section-sub-title">Delicato</div>
                         <div class="section-title text-uppercase">Hình ảnh công trình</div>
@@ -268,12 +305,42 @@
             </div>
         </div>
     </section>
+    <section class="info-ex">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="chart" data-percent="75">
+                        <span>75%</span>
+                    </div>
+                    <p>Interior Design</p>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="chart" data-percent="80">
+                        <span>80%</span>
+                    </div>
+                    <p>Interior Design</p>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="chart" data-percent="85">
+                        <span>85%</span>
+                    </div>
+                    <p>Interior Design</p>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="chart" data-percent="90">
+                        <span>90%</span>
+                    </div>
+                    <p>Interior Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="blog">
         <div class="container">
             <div class="section-sub-title text-center">Blog</div>
             <div class="section-title text-center">TIN TỨC MỚI NHẤT</div>
             <div class="row mt-4">
-                <div class="col-lg-4">
+                <div class="col-lg-4 ">
                     <div class="blog-item">
                         <img src="./assets/img/blog.jpg" alt="">
                         <div class="body">
@@ -289,7 +356,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 ">
                     <div class="blog-item">
                         <img src="./assets/img/blog.jpg" alt="">
                         <div class="body">
@@ -305,7 +372,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 ">
                     <div class="blog-item">
                         <img src="./assets/img/blog.jpg" alt="">
                         <div class="body">
@@ -331,12 +398,12 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-container">
             <div class="footer-img">
                 <img src="./assets/img/Logo.png" alt="" class="">
             </div>
             <div class="row row-cols-lg-5 mt-5">
-                <div class="col-lg">
+                <div class="col-lg col-12">
                     <div class="title">Liên hệ</div>
                     <div class="address mb-2">121 King Street, Melbourne Victoria 3000 Australia</div>
                     <div class="phone">+84 123 456 789</div>
@@ -356,7 +423,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg">
+                <div class="col-lg col-6">
                     <div class="title">Liên kết</div>
                     <div class="footer-link">
                         <a href="">Giới thiệu</a>
@@ -371,7 +438,7 @@
                         <a href="">Tin tức</a>
                     </div>
                 </div>
-                <div class="col-lg">
+                <div class="col-lg col-6">
                     <div class="title">Dịch vụ</div>
                     <div class="footer-link">
                         <a href="">Tư vấn thiết kế</a>
@@ -380,7 +447,7 @@
                         <a href="">Lắp đặt thi công</a>
                     </div>
                 </div>
-                <div class="col-lg">
+                <div class="col-lg col-12">
                     <div class="title">newsletter</div>
                     <span>Nhận thông báo mới nhất</span>
                     <form action="" class="footer-form">
@@ -393,19 +460,26 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg">
+                <div class="col-lg col-12">
                     <div class="title">map</div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.98839009514!2d105.81945407552648!3d21.022738704089793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lpLCBIb8OgbiBLaeG6v20sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1644673792729!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="copyright">Copyright © 2022 Delicato. All Rights Reserved. Designed by Vico Group</div>
         </div>
+        <img src="./assets/img/icon-tree.png" alt="" class="footer-bg">
     </footer>
+    <a href="" class="icon-fixed map"><i class="fas fa-map-marked-alt"></i></a>
+    <a href="" class="icon-fixed chat"><i class="fas fa-comment-dots"></i></a>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"
         integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/jquery.easypiechart.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
